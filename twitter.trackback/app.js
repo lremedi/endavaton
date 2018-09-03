@@ -28,11 +28,9 @@ var ondata = function (tweet) {
 
 var onend = function(event_data) {
     if (!manual_stop && auto_start){
-        process.send({event:{type:"info"},data:{message:i18n.AUTO_STARTING}});
-        start(message.data.user);
+        start("lremedi");
     }
     if(manual_stop){
-        process.send({event:{type:"info"},data:{message:i18n.MANUALLY_STOPPED}});
     }
 }
 
